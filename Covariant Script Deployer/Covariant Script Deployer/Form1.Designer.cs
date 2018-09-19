@@ -134,7 +134,9 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileName = "distribution.txt";
+            this.openFileDialog1.Filter = "文本文件|*.txt";
+            this.openFileDialog1.Title = "打开源描述文件";
             // 
             // label5
             // 
