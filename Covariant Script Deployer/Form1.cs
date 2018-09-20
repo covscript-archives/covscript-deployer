@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace Covariant_Script_Deployer
