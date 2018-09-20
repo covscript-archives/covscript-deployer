@@ -74,7 +74,6 @@ namespace Covariant_Script_Deployer
                 if (path.Length != 0)
                 {
                     label6.Text = "正在部署..." + (progress / dist_info.Length) * 100 + "%";
-                    Thread.Sleep(100);
                     Application.DoEvents();
                     path = textBox2.Text + "\\" + path;
                     File.WriteAllText(path + ".md5", GetMD5HashFromFile(path));
