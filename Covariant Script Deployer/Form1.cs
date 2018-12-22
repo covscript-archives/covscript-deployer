@@ -52,6 +52,12 @@ namespace Covariant_Script_Deployer
 
         private void button2_Click(object sender, EventArgs e)
         {
+            bool validate = true;
+            try
+            {
+                openFileDialog1.InitialDirectory = Path.GetDirectoryName(textBox2.Text) + "\\covscript_distribution";
+            }
+            catch (Exception) { }
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 textBox3.Text = openFileDialog1.FileName;
         }
@@ -72,7 +78,7 @@ namespace Covariant_Script_Deployer
                 string path = info.Split('@')[0].Replace('/', '\\');
                 if (path.Length != 0)
                 {
-                    label6.Text = "正在部署..." + (int)(progress / dist_info.Length) * 100 + "%";
+                    label6.Text = "正在部署..." + (int)(progress / dist_info.Length * 100) + "%";
                     Application.DoEvents();
                     path = textBox2.Text + "\\" + path;
                     File.WriteAllText(path + ".md5", GetMD5HashFromFile(path));
