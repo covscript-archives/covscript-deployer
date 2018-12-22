@@ -52,7 +52,6 @@ namespace Covariant_Script_Deployer
 
         private void button2_Click(object sender, EventArgs e)
         {
-            bool validate = true;
             try
             {
                 openFileDialog1.InitialDirectory = Path.GetDirectoryName(textBox2.Text) + "\\covscript_distribution";
