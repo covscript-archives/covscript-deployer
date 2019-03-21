@@ -54,7 +54,7 @@ namespace Covariant_Script_Deployer
         {
             try
             {
-                openFileDialog1.InitialDirectory = Path.GetDirectoryName(textBox2.Text) + "\\covscript_distribution";
+                openFileDialog1.InitialDirectory = Path.GetFullPath(textBox2.Text) + "\\covscript_distribution";
             }
             catch (Exception) { }
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
